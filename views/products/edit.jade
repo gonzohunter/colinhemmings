@@ -1,0 +1,10 @@
+h1= title
+form(action='/products/' + product.id, method='POST')
+	p
+		label(for='product_name') Name:
+		input(type='text', id='product_name', name='product[name]', value=product.name)
+	p
+		label(for='product_description') Description:
+		textarea(id='product_description', name='product[description]')= product.description
+	p
+		input(type='submit')
